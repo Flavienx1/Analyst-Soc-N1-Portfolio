@@ -1,54 +1,39 @@
- SOC Analyst N1 Portfolio - Flavien
+# SOC Analyst N1 Portfolio - Flavien
+
+## Profil
+Je développe mes compétences en cybersécurité avec un focus sur le rôle d’analyste SOC N1
+
+Portfolio orienté pratique, basé sur des scénarios réalistes :
+- bruteforce
+- credential dumping
+- malware execution
+- mouvement latéral
+- persistance
+
 
 ## Objectif
-Je développe mes compétences en cybersécurité avec un focus sur le rôle d’analyste SOC N1, à travers l’analyse d’incidents réels et simulés.
+Intégrer un SOC en tant qu’analyste N1 et évoluer rapidement vers un rôle N2.
 
-Ce portfolio démontre ma capacité à :
-- analyser des logs Windows et Linux
-- détecter des comportements suspects
-- qualifier des incidents de sécurité
-- proposer une réponse N1 adaptée
-- identifier les cas nécessitant une escalade N2
-
----
 
 ## Projets
 
-### 🔹 Bruteforce SSH (Linux)
-Détection d’une attaque brute force sur un service SSH exposé  
-
-### 🔹 Dump LSASS (Credential Access)
-Détection d’une tentative de vol d’identifiants via dump mémoire  
-
-### 🔹 Malware Download (IP externe)
-Téléchargement et exécution d’un payload via certutil  
-
-### 🔹 Credential Abuse & Mouvement Latéral
-Utilisation suspecte d’un compte de service  
-
-### 🔹 PowerShell Obfusqué & Persistance
-Exécution PowerShell encodée suivie d’une tâche planifiée  
-
-### 🔹Bruteforce (Windows )
-En cours..
+- Bruteforce SSH → détection d’attaque automatisée
+- LSASS Dump → vol d’identifiants
+- Malware Download → utilisation de LOLBIN (certutil)
+- Credential Abuse → mouvement latéral
+- PowerShell Obfusqué → persistance
 
 
----
+## Compétences
 
-## Compétences développées
+- Analyse de logs (Windows / Linux (auth.log)))
+- Détection de comportements suspects
+- Réponse N1 (tri, analyse, escalade)
 
-- Analyse de logs : Windows Event, Linux (auth.log)
-- Détection : PowerShell obfusqué, LOLBIN, bruteforce, mouvement latéral
-- Réseau : TCP/IP, DNS, HTTP (bases)
-- Méthodologie SOC : tri d’alertes, analyse, réponse N1, escalade
-
----
 
 ## Certification
 
-CompTIA Security+ — en cours de préparation
-
----
+Security+ — en cours
 
 ## Contact
 
