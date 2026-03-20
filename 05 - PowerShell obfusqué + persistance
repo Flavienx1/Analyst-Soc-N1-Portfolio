@@ -1,0 +1,55 @@
+# Incident 05 - PowerShell obfusqué avec mécanisme de persistance
+
+## Contexte
+Une alerte a été remontée sur une exécution PowerShell encodée, suivie d’une création de tâche planifiée.
+
+## Logs observés
+
+Event ID: 4688
+New Process Name: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Creator Process Name: C:\Windows\System32\cmd.exe
+Command Line: powershell.exe -enc SQBmACgAJABQAFMAVgBlAHIAcwBpAG8AbgBUAGEAYgBsAGUALgBQAFMAVgBlAHIAcwBpAG8AbgApAA==
+
+Event ID: 4698
+Task Name: \WindowsUpdateCheck
+Task Content: powershell.exe -ExecutionPolicy Bypass -File C:\ProgramData\updater.ps1
+
+File Created:
+C:\ProgramData\updater.ps1
+
+Analyse
+
+PowerShell lancé avec argument encodé
+Obfuscation probable pour masquer l’action réelle
+Création d’une tâche planifiée ensuite
+Nom de tâche ressemblant à quelque chose de légitime
+Persistance probable via Scheduled Task
+
+Hypothèse
+
+Exécution malveillante PowerShell suivie d’un mécanisme de persistance sur le poste.
+
+Impact possible
+
+Réexécution automatique du code malveillant
+Maintien de l’accès
+Téléchargement de payload supplémentaire
+Exfiltration ou mouvement latéral ultérieur
+
+Réponse N1
+
+Isoler la machine
+Identifier le contenu du script updater.ps1
+Vérifier si la tâche existe sur d’autres machines
+Supprimer ou faire supprimer la persistance selon procédure
+Escalader au N2 / IR
+
+Escalade prioritaire car :
+
+obfuscation + persistance = forte suspicion malveillante
+risque de réinfection immédiate
+besoin d’analyse plus poussée du script
+
+Conclusion
+
+La séquence PowerShell encodé puis tâche planifiée est fortement évocatrice d’une persistance malveillante mise en place après exécution initiale.
