@@ -1,0 +1,45 @@
+# Incident 02 - Suspicion de dump LSASS sur poste Windows
+
+## Contexte
+Un poste Windows a généré une alerte sur un accès mémoire suspect visant LSASS.
+
+## Logs observés
+```text
+Event ID: 4688
+New Process Name: C:\Windows\System32\rundll32.exe
+Creator Process Name: C:\Windows\System32\cmd.exe
+Command Line: rundll32.exe C:\Windows\System32\comsvcs.dll, MiniDump 708 C:\ProgramData\lsass.dmp full
+
+Analyse
+
+Utilisation de comsvcs.dll avec MiniDump
+Création d’un fichier lsass.dmp
+La cible implicite est le processus LSASS
+Ce comportement est fortement associé au credential dumping
+
+Hypothèse
+
+Tentative d’extraction des identifiants présents en mémoire via dump LSASS.
+Impact possible
+Vol d’identifiants
+Réutilisation des accès
+Mouvement latéral
+Escalade de privilèges
+
+Réponse N1
+
+Isoler immédiatement la machine
+Vérifier le compte ayant lancé la commande
+Rechercher si le fichier dump a été créé ( et si il y a eu fuite de donnée via log firewall )
+Chercher d’autres exécutions similaires sur l’environnement
+Escalader au N2 / incident response
+
+Escalade immédiate recommandée car :
+
+technique post-exploitation connue
+risque élevé de compromission d’identifiants
+possible propagation rapide
+
+Conclusion
+
+La chaîne de processus et la ligne de commande sont fortement cohérentes avec une tentative de dump LSASS pour vol de credentials.
