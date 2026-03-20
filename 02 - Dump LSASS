@@ -4,7 +4,7 @@
 Un poste Windows a généré une alerte sur un accès mémoire suspect visant LSASS.
 
 ## Logs observés
-```text
+
 Event ID: 4688
 New Process Name: C:\Windows\System32\rundll32.exe
 Creator Process Name: C:\Windows\System32\cmd.exe
