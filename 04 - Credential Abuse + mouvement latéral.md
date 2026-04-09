@@ -5,6 +5,7 @@ Un compte de service a été observé en train d’exécuter des commandes de re
 
 ## Logs observés
 
+```Powershell 
 Event ID: 4624
 Account Name: svc_backup
 Logon Type: 3
@@ -21,8 +22,8 @@ Event ID: 4688
 New Process Name: C:\Windows\System32\nltest.exe
 Creator Process Name: C:\Windows\System32\cmd.exe
 Command Line: nltest /dclist:corp.local
-
-Analyse
+``` 
+## Analyse
 
 Connexion réseau avec Logon Type 3
 Utilisation de NTLM ( et non kerberos qui est plus securisé )
@@ -31,29 +32,29 @@ cmd.exe lancé via services.exe
 Commandes de reconnaissance domaine
 Pattern cohérent avec abuse d’identifiants + mouvement latéral
 
-Hypothèse
+## Hypothèse
 
 Le compte svc_backup est potentiellement compromis et utilisé pour reconnaissance interne après accès initial.
 
-Impact possible
+## Impact possible
 
 Extension de la compromission
 Accès à d’autres systèmes
 Préparation d’escalade ou de collecte d’identifiants supplémentaires
 
-Réponse N1
+## Réponse N1
 
 Identifier toutes les machines touchées par le compte
 Vérifier les heures et la cohérence métier du compte
 Isoler si besoin les hôtes les plus suspects
 Forcer la rotation du mot de passe du compte de service
 
-Escalade nécessaire si :
+## Escalade N2 nécessaire si :
 
 le compte n’a pas vocation à faire ce type d’action
 plusieurs hôtes sont touchés
 d’autres commandes de discovery sont trouvées
 
-Conclusion
+## Conclusion
 
 L’usage du compte svc_backup avec cmd.exe via services.exe et commandes de reconnaissance suggère un credential abuse avec mouvement latéral probable.
