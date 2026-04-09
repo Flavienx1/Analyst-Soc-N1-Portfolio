@@ -37,5 +37,5 @@ Security+ — en cours
 
 ## Contact
 
-📧 flavien.ferte@hotmail.com 
+📧 flavien.ferte@hotmail.com   
 https://www.linkedin.com/in/flavien-ferte-739489400/
