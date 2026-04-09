@@ -25,35 +25,35 @@ Command Line: nltest /dclist:corp.local
 ``` 
 ## Analyse
 
-Connexion réseau avec Logon Type 3
-Utilisation de NTLM ( et non kerberos qui est plus securisé )
-Compte de service utilisé de manière interactive ou semi-interactive
-cmd.exe lancé via services.exe
-Commandes de reconnaissance domaine
-Pattern cohérent avec abuse d’identifiants + mouvement latéral
+Connexion réseau avec Logon Type 3  
+Utilisation de NTLM ( et non kerberos qui est plus securisé )  
+Compte de service utilisé de manière interactive ou semi-interactive  
+cmd.exe lancé via services.exe  
+Commandes de reconnaissance domaine  
+Pattern cohérent avec abuse d’identifiants + mouvement latéral  
 
 ## Hypothèse
 
-Le compte svc_backup est potentiellement compromis et utilisé pour reconnaissance interne après accès initial.
+Le compte svc_backup est potentiellement compromis et utilisé pour reconnaissance interne après accès initial.  
 
 ## Impact possible
 
-Extension de la compromission
-Accès à d’autres systèmes
-Préparation d’escalade ou de collecte d’identifiants supplémentaires
+Extension de la compromission  
+Accès à d’autres systèmes  
+Préparation d’escalade ou de collecte d’identifiants supplémentaires  
 
 ## Réponse N1
 
-Identifier toutes les machines touchées par le compte
-Vérifier les heures et la cohérence métier du compte
-Isoler si besoin les hôtes les plus suspects
-Forcer la rotation du mot de passe du compte de service
+Identifier toutes les machines touchées par le compte  
+Vérifier les heures et la cohérence métier du compte  
+Isoler si besoin les hôtes les plus suspects  
+Forcer la rotation du mot de passe du compte de service  
 
 ## Escalade N2 nécessaire si :
 
-le compte n’a pas vocation à faire ce type d’action
-plusieurs hôtes sont touchés
-d’autres commandes de discovery sont trouvées
+le compte n’a pas vocation à faire ce type d’action  
+plusieurs hôtes sont touchés  
+d’autres commandes de discovery sont trouvées  
 
 ## Conclusion
 
