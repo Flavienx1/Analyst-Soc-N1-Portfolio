@@ -34,7 +34,7 @@ Rechercher si le fichier dump a été créé ( et si il y a eu fuite de donnée 
 Chercher d’autres exécutions similaires sur l’environnement  
 Escalader au N2 / incident response  
 
-## €scalade N2 car :
+## Escalade N2 car :
 
 technique post-exploitation connue  
 risque élevé de compromission d’identifiants  
