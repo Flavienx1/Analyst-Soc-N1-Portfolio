@@ -7,7 +7,7 @@ Portfolio orienté pratique, basé sur des scénarios réalistes :
 
 
 ## Objectif
-Intégrer un SOC en tant qu’analyste N1 et évoluer rapidement vers un rôle N2.
+Intégrer un SOC en tant qu’analyste N1 et évoluer rapidement vers un rôle de Cloud Analyst 
 
 
 ## Projets
