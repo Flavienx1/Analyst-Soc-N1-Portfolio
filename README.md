@@ -4,11 +4,6 @@
 Je développe mes compétences en cybersécurité avec un focus sur le rôle d’analyste SOC N1
 
 Portfolio orienté pratique, basé sur des scénarios réalistes :
-- bruteforce
-- credential dumping
-- malware execution
-- mouvement latéral
-- persistance
 
 
 ## Objectif
@@ -22,6 +17,8 @@ Intégrer un SOC en tant qu’analyste N1 et évoluer rapidement vers un rôle N
 - Malware Download → utilisation de LOLBIN (certutil)
 - Credential Abuse → mouvement latéral
 - PowerShell Obfusqué → persistance
+- compromission windows
+- kill chaine complète crypto miner 
 
 
 ## Compétences
