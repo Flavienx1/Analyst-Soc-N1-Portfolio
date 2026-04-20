@@ -23,14 +23,10 @@ Intégrer un SOC en tant qu’analyste N1 et évoluer rapidement vers un rôle N
 
 ## Compétences
 
-- Analyse de logs (Windows / Linux (auth.log)))
+- Analyse de logs (Windows / Linux (auth.log)/Web)
 - Détection de comportements suspects
 - Réponse N1 (tri, analyse, escalade)
 
-
-## Certification
-
-Security+ — en cours
 
 ## Contact
 
