@@ -133,11 +133,5 @@ Risque élevé de propagation dans le domaine.
 
 ---
 
-## 🔎 Requêtes Splunk
 
-index=windows EventCode=4624 Account_Name=svc_backup
-
-index=windows EventCode=4688 CommandLine="*rundll32*"
-
-index=windows "lsass.dmp"
 
