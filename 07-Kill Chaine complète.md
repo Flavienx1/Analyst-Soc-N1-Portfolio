@@ -149,12 +149,11 @@ Command Line: miner.exe -o pool.minexmr.com:3333 -u wallet123
 
 ## 🛡️ Actions recommandées
 
+- Isoler le poste  
 - Bloquer les IP malveillantes  
 - Supprimer la tâche planifiée  
-- Isoler le poste  
 - Scanner le système  
-- Réinitialiser les identifiants  
-
+- Réinitialiser les mot de passe  
 ---
 
 ## 📊 Conclusion
